@@ -1,0 +1,8 @@
+This stage creates a counter that foes from 64 down to 0. The counter interrupts every second, and the count is displayed in a 
+lightbar, using specific GPIO pins as outputs. 
+
+Refer to the link below to see the light bar used:
+* http://media.digikey.com/photos/Lite%20On%20Photos/LITE-ON%20INC-%20LTA-1000G.jpg
+
+Each stage creates a file that is going to be added in the mylib folder, in this case s4344046_lightbar.c and 
+s4344046_lightbar.h were created. For more info of how the gpio pins areset as outputs refer to main.c inside ot stage1 folder
