@@ -1,0 +1,38 @@
+Most relevant Commits made for Project 2.
+
+03-Jun-2016 -> FINAL SUBMISION 
+Progress made in here:
+* Delete comments and unused functions (that helped to debug) or variables.
+* Accelerometer implementation, control rover using accelerometer, NOTE that the velocities for the motor must be defined first.
+*Bug fixed, at the moment at assigning a specific velocity for the motors in these cases:
+-> Forward
+-> Reverse
+-> Angle
+* Bug fixed that made the program to crash everytime, the problem was checking a variable that has been initialized but not given a value, with a valid angle (variable that contains the angle value).
+
+
+02-Jun-2016 -> fixing calibration for angles
+Progress made in here:
+*Assign to the main function another timer, since pan/tilt use timer 2.
+*calibrate pan/tilt as good as possible, since they have a small percentage of erro.
+*Calculate maximum angle that the laser can me moved, this could be done by considering the 300mm of separation for laser and test sheet that shows the position of the rover in the sandpit (scaled in our test sheet).
+*Consider that the angle made es origin for the ORB is the upper-left corner of the sheet, so additional calibration mas be done in order to match the displacement of the rover onto the page.
+
+
+
+29-May-2016 -> implement LED lightbar function (needs to be called), radio can be switched from orb to rover
+*Implement command that takes 2 input variables (for orb: #station #channel), in the case for orb we only needed one input (the channel number).
+*Radio now can be switched from hearing from the orb to hearing/writting to the rover radio.
+*Light bar pins have been modified since they were matched for previous stages and project, but since the radio uses pin d9, the calibration must be made, this didnt take a lot of time since all the pins were defined as macros so the change was fast an effective.
+*Light bar function is impemented but not directly tested with the rover response for "getsensor".
+
+
+Revelevant commit for Milestone:
+
+19-May-2016 -> adding last line (z-axis orientation por PL), final commit.
+*After reading from registers, and according to datasheet (did not considered this at start) as soon as the state of the accelerometer changes, it triggers bit 7 of the register, and the 7th pin was not considered to set the limits of our results, but after realizing the problem, it was fixed.
+*Some inneficient code (not used of library), was added as clear functions into mylib folder "CRC file".
+
+
+
+
