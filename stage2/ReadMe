@@ -1,0 +1,9 @@
+For this stage, a duty cycle is controlled using the x-axis of a joystick. 
+In order to accomplish this, another characteristic of GPIO pins need to be set, ADC mode, in order to receive the values
+of the position of the joystick according to a voltage.
+
+For this stage new files are added to mylib folder:
+* s4344046_joystick.c
+* s4344046_joystick.h
+
+Refer to those files in order to see which pins are set in ADC mode and how those values are read from the joystick.
